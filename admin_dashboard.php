@@ -2,7 +2,7 @@
 session_start();
 
 
-$inactive = 1800; // Άλλαξέ το σε 1800 μετά τη δοκιμή
+$inactive = 1800; 
 if (isset($_SESSION['timeout'])) {
     $session_life = time() - $_SESSION['timeout'];
     if ($session_life > $inactive) {
@@ -95,4 +95,5 @@ $username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username'
 
 </body>
 </html>
+
 
