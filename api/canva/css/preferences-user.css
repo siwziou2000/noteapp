@@ -1,0 +1,24 @@
+.profile-card 
+{
+    border-radius: 
+    15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+
+.verified-badge 
+{
+     color: #28a745; 
+}
+
+
+.unverified-badge
+         { 
+            color: #dc3545; 
+        }
+
+
+.avatar-preview
+ { 
+    width: 150px;
+    height: 150px; 
+    object-fit: cover; 
+}

@@ -1,0 +1,243 @@
+/* sitch label  */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+
+}
+
+/* switch label */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before   {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+/* stoggligi morfi to label switch */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round::before{
+    border-radius: 50%;
+}
+
+/* dark mode styleee */
+
+body.dark {
+    background: #121212 !important;
+    color: #e0e0e0  !important;
+}
+
+/* dark mode all content   tis selidas*/
+
+body.dark .app-container,
+body.dark .app-header,
+body.dark .header-content,
+body.dark .header-content,
+body.dark .hader-title h1,
+body.dark .header-title h3,
+body.dark .header-title small,
+body.dark .header-actions,
+body.dark .main-content,
+body.dark .sidebar,
+body.dark .notes-board-container,
+body.dark .board-header,
+body.dark .board-title,
+body.dark .board-actions{
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+    border-color: #333 !important;
+}
+
+/* kanones eidkikoi gia to periexomeno tou header */
+
+body.dark .app-header {
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+body.dark .header-title h1,
+body.dark .header-title h3,
+body.dark .header-title small{
+    color: #e0e0e0 !important;
+}
+
+/* dark mode board eidikoi kanones */
+body.dark .notes-board {
+    background-color: #1e1e1e !important;
+
+}
+
+body.dark .board-header
+{
+    background-color: #1e1e1e !important;
+    border-bottom: 1px solid #333 in !important;
+}
+
+body.dark .board-title {
+    color: #e0e0e0 !important;
+}
+
+/* dark mode sidebar  */
+
+body.dark .sidebar {
+    background-color: #1e1e1e !important;
+    border-right: 1px solid #333 !important;
+}
+
+/* button  */
+body.dark .btn-outline-secondary {
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+    background-color: transparent !important;
+
+}
+
+body.dark .btn-outline-secondary:hover {
+    background-color: #333 !important;
+}
+
+body.dark .card-header {
+    background-color: #2d2d2d !important;
+    border-bottom-color: #333  !important;
+    color: #e0e0e0 !important;
+}
+body.dark .list-group-item {
+    background-color: #2d2d2d !important;
+    border-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark .list-group-item.active {
+    background-color: #3a3a3a !important;
+    color: #fff !important;
+}
+
+/* styl gia to quill js */
+
+.ql-container {
+    border : 1px solid #ccc !important;
+    border-radius: 4px;
+}
+.ql-toolbar {
+    background: #f3f3fe;
+    border: 1px solid #ccc !important;
+
+}
+
+.ql-editor {
+    color: #000;
+    background: #fff;
+}
+
+
+/* dark mode gia to quill js */
+body.dark .ql-container {
+    border-color: #555 !important;
+    background-color: #2d2d2d !important;
+}
+
+body.dark .ql-toolbar {
+    background: #333 !important;
+    border-color: #555 !important;
+    }
+
+body.dark .ql-editor {
+        color: #eee !important;
+        background: #222 !important;
+    }
+
+body.dark .ql-editor .ql-stroke {
+        stroke: #eee !important;
+
+    }
+body.dark .ql-snow .ql-file {
+    fill: #eee !important;
+}
+
+/* modal dark mode */
+
+body.dark .modal-content {
+    background-color: #2d2d2d !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark .modal-header {
+    background-color: #1e1e1e !important;
+    border-bottom-color: #333 !important;
+    color:  #e0e0e0 !important;
+}
+
+
+body.dark .modal-footer {
+    background-color: #1e1e1e !important;
+    border-top-color:#333 !important ;
+    color: #e0e0e0 !important;
+    
+}
+
+/* form element */ 
+body.dark .form-control ,
+body.dark .form-control{
+    background-color:  #333 !important;
+    border-color:  #444 !important;
+    color: #fff !important;
+}
+
+body.dark .form-label {
+    color: #a0a0a0 !important;
+
+}
+
+/* text color */
+body.dark .text-muted {
+    color: #a0a0a0 !important;
+}
+
+/* bafges */
+
+body.dark .badge.bg-secondary {
+    background-color: #555 !important;
+}
+
+/* lock indicator style dark mode */
+
+body.dark .lock-indicator {
+    background-color: #444 !important;
+    color: #ffcc00  !important;
+}

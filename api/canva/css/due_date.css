@@ -1,0 +1,11 @@
+
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); border-color: #dc3545; }
+    70% { box-shadow: 0 0 0 15px rgba(220, 53, 69, 0); border-color: #dc3545; }
+    100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); border-color: #dc3545; }
+}
+
+.note-overdue {
+    animation: pulse-red 2s infinite !important;
+    border: 2px solid #dc3545 !important;
+}

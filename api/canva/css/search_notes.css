@@ -1,0 +1,22 @@
+/* Το εφέ που αναβοσβήνει η σημείωση */
+.highlight-search-result {
+    outline: 4px solid #ffc107 !important;
+    box-shadow: 0 0 20px rgba(255, 193, 7, 0.8) !important;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05); /* Μικρό μεγέθυνση για έμφαση */
+    z-index: 1000;
+}
+
+/* Στυλ για το πλαίσιο των αποτελεσμάτων */
+#searchResults {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.list-group-item-action:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}

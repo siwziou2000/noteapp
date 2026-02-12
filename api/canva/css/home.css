@@ -1,0 +1,169 @@
+:root {
+    --primary-color: #ffcc00;
+    --secondary-color: #007bff;
+    --nav-height: 64px;
+    --transition-timing: 0.3s ease;
+    
+}
+
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 30px;
+    margin: 0; /* Προσθήκη */
+}
+
+/* Enhanced Navbar */
+.navbar {
+    height: var(--nav-height);
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 0; /* Προσθήκη */
+    border-radius: 0; /* Προσθήκη */
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    color: rgba(0,0,0,0.8);
+    transition: color var(--transition-timing);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: var(--secondary-color);
+    transition: all var(--transition-timing);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: calc(100% - 2rem);
+    left: 1rem;
+}
+
+
+
+
+
+
+.menu-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Στυλ για τους συνδέσμους */
+.menu-link {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.menu-link:hover {
+    background: #ddd;
+}
+
+.menu-link.active {
+    background: #007bff;
+    color: white;
+}
+
+
+.menu-link:hover,
+.menu-link.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}
+
+/* Main Content */
+.main-container {
+    padding: 4rem;
+}
+
+
+
+
+/* Canvas Grid */
+.canvas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.canvas-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.canvas-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.create-new {
+    background: rgba(173, 216, 230, 0.2);
+    border: 2px dashed #add8e6;
+    color: var(--secondary-color);
+}
+
+
+
+/* Right Sidebar Updates */
+.right-sidebar {
+    background: #ffffff;
+    border-left: 1px solid #e9ecef;
+}
+
+.group-item {
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.group-item:hover {
+    background: #f8f9fa;
+}
+
+.group-actions {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.group-item:hover .group-actions {
+    opacity: 1;
+}
+
+.task-item {
+    border: 1px solid #dee2e6;
+    transition: transform 0.1s;
+}
+
+.task-item:hover {
+    transform: translateX(5px);
+    border-color: var(--primary-color);
+}
+
+.task-priority {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    padding: 0;
+    margin-left: 0.5rem;
+}
