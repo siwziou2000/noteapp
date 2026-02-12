@@ -1,0 +1,10 @@
+{
+    "require": {
+        "robthree/twofactorauth": "*",
+        "phpmailer/phpmailer": "^6.9",
+        "cboden/ratchet": "^0.4.4",
+        "ramsey/uuid": "^4.7",
+        "pusher/pusher-php-server": "*",
+        "phpoffice/phpword": "^1.3"
+    }
+}

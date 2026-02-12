@@ -1,0 +1,3 @@
+Options -Indexes
+php_flag display_errors Off
+ErrorDocument 500 /noteapp/500.php

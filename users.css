@@ -1,0 +1,62 @@
+:root {
+            --primary-color: #ffcc00;
+            --secondary-color: #007bff;
+            --sidebar-width: 240px;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 56px;
+        }
+
+        /* Βελτιωμένο Navbar */
+        .navbar {
+            background: var(--primary-color) !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Πλαϊνό Μενού */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: white;
+            position: fixed;
+            top: 56px;
+            bottom: 0;
+            left: 0;
+            padding: 1rem 0;
+            box-shadow: 3px 0 12px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .sidebar-link {
+            padding: 0.75rem 1.5rem;
+            color: #495057;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-radius: 0 1rem 1rem 0;
+        }
+
+        .sidebar-link:hover,
+        .sidebar-link.active {
+            background: var(--secondary-color);
+            color: white !important;
+        }
+
+        /* Κύριο Περιεχόμενο */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            transition: margin-left 0.3s;
+            top:left;
+        }
+
+
+        
+
+       
