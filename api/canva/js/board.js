@@ -791,6 +791,59 @@ class NoteManager {
         if (!isViewer) await this.updateNote(e);
     });
 }
+    //synarrtisi rename canva/pinaka
+handleRenameCanvas(button) {
+    const li = button.closest('li');
+    const link = li.querySelector('.canvas-link');
+    if (!link) return;
+
+    const originalText = link.textContent;
+    const canvasId = button.dataset.id;
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.className = 'form-control form-control-sm';
+    input.value = originalText;
+
+    link.replaceWith(input);
+    input.focus();
+
+    const finishRename = async () => {
+        const newName = input.value.trim();
+        
+        // Έλεγχος αν άλλαξε το όνομα και αν δεν είναι κενό
+        if (newName && newName !== originalText) {
+            try {
+                // ΔΙΟΡΘΩΣΗ: & αντί για $ και σωστό όνομα αρχείου
+                const response = await fetch(`rename_canva.php?id=${canvasId}&name=${encodeURIComponent(newName)}`);
+                
+                if (response.ok) {
+                    const newLink = document.createElement('a');
+                    newLink.href = `board.php?id=${canvasId}`;
+                    newLink.className = 'canvas-link me-2 flex-grow-1';
+                    newLink.textContent = newName; // ΔΙΟΡΘΩΣΗ: Προσθήκη του κειμένου
+                    input.replaceWith(newLink);
+                } else {
+                    input.replaceWith(link);
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+                input.replaceWith(link);
+            }
+        } else {
+            // Αν δεν άλλαξε τίποτα ή είναι κενό, επανάφερε το παλιό link
+            input.replaceWith(link);
+        }
+    };
+
+    input.addEventListener('blur', finishRename);
+    input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            input.blur();
+        }
+    });
+}
+    
     // synartis gia lockarimsi tis simeioseis
     
 addNoteLockIndicator(noteElement, userId, lockedByName) {
