@@ -19,6 +19,14 @@ CREATE TABLE `canvases` (
   `token_access_type` enum('view','edit') DEFAULT 'view'
 );
 
+CREATE TABLE `group_tasks` (
+  `id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `task_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `description` varchar(255) NOT NULL
+);
+
 CREATE TABLE `canvas_collaborators` (
   `id` int(11) NOT NULL,
   `canva_id` int(11) NOT NULL,
@@ -259,7 +267,11 @@ ALTER TABLE `notes`
   ADD KEY `user_id` (`user_id`),
   ADD KEY `owner_id` (`owner_id`),
   ADD KEY `group_id` (`group_id`);
+--
+ALTER TABLE `group_tasks`
+  ADD PRIMARY KEY (`id`);
 
+--
 --
 -- Ευρετήρια για πίνακα `notifications`
 --
