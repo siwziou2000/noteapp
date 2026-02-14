@@ -6,22 +6,28 @@ include('includes/navbar.php');
 // Συμπερίληψη του PHPMailer
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';
 
-// Σύνδεση με τη βάση δεδομένων με PDO
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "noteapp";
-
 try {
-    $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $username, $password);
-    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Σφάλμα σύνδεσης: " . $e->getMessage());
+    $dotenv = Dotenv::createImmutable(_DIR_);
+    $dotenv->load();
+
+} catch  (Exception $e) {
+    die("Σφαλμα φορτωσης  ρυθμισεων  περιβαλλοντος.")
 }
 
+;
+
+try {
+    $dsn = "mysql:host=" . $_ENV['DB_HOST'] . ";dbname=" . $_ENV['DB_NAME'] . ";charset=utf8";
+    $connection = newPDO($dsn, $_ENV['DB_USER'], $_ENV['DB_PASS']);
+    $connection->setAttrtibute(PDO::ATTR_ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Σφαλμα σύνδεσης: " . $e->getMessage());
+}
+    
 // Επεξεργασία της φόρμας
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
@@ -121,5 +127,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 </div>
+
 
 <?php include('includes/footer.php'); ?>
