@@ -13,12 +13,16 @@ Database: MySQL (μέσω XAMPP)
 
 Dependency Management: Composer (PHPMailer για ανάκτηση κωδικών)
 
-Frontend: HTML5, CSS3,Bootstap5 (responsive design) JavaScript (AJAX για live search), Jqueyry για τη διαχειριση  του DOM  και των συμβαντων, AJAX / JSON: Για την ανταλλαγή δεδομένων μεταξύ Client και Server χωρίς ανανέωση της σελίδας (π.χ. στο Live Search ή στην αποθήκευση σημειώσεων).
+Frontend: HTML5, CSS3,Bootstap5 (responsive design) 
+JavaScript (AJAX για live search), 
+Jqueyry για τη διαχειριση  του DOM  και των συμβαντων, 
+AJAX / JSON: Για την ανταλλαγή δεδομένων μεταξύ Client και Server χωρίς ανανέωση της σελίδας (π.χ. στο Live Search ή στην αποθήκευση σημειώσεων).
 
 
 Security: Σύστημα ρόλων χρηστών, επαλήθευση email και κρυπτογράφηση κωδικών.
 
 Οδηγίες Εγκατάστασης (Installation) για  τη βιβλιθηκη phpmailer για την ανακτηση του κωδικου προσβασης των χρηστων 
+
 Αντιγραφή: Τοποθετήστε τον φάκελο του project στη διαδρομή: C:\xampp\htdocs\noteapp.
 
 Βιβλιοθήκες: Ανοίξτε το τερματικό (Command Prompt) μέσα στον φάκελο και εκτελέστε:
@@ -30,11 +34,11 @@ composer install
 
 Εκτέλεση: Ανοίξτε τον browser και πληκτρολογήστε: http://localhost/noteapp.
 
-Επισης για να λειτορυγησει η  βιβλιοθηκη  phpmailer πρεπει να  εισερθετε  μεσα  στο  phpmyini που το βρισκεται στο κουμπι  του Apache, πατατε στο config   και μεταβρειτε το ;extension=zip  ωστε να αφαιρεσετε το ερωτηματικο. Αποθηκεύστε και επανεκκινήστε το τερματικό σας.
+Επισης για να λειτουργησει η  βιβλιοθηκη  phpmailer πρεπει να  εισερθετε  μεσα  στο  phpmyini που το βρισκεται στο κουμπι  του Apache, πατατε στο config   και  να αναζητησετε το ;extension=zip  ωστε να αφαιρεσετε το ερωτηματικο. Αποθηκεύστε και επανεκκινήστε το τερματικό σας.
 
-Επισης  για να δουλεψει  η  βιβλιοθηκη χρειαζετε  να  προστεστε  και  το require 'vendro/autoload.php, use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-στο αρχειο που εινια υπευθευνο για  την  ανακτηση του κωδικου  προσβασης (forgot_password.php). 
+Επισης  για να δουλεψει  η  βιβλιοθηκη χρειαζετε  να  προστεστε  και  το require 'vendro/autoload.php, 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;  στο αρχειο που εινια υπευθευνο για  την  ανακτηση του κωδικου  προσβασης (forgot_password.php). 
 
 Επιπλεον χρειαζεται  και  η ρυθμιση Google (Gmail) για  την  αποστολη 
 
