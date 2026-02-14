@@ -17,7 +17,7 @@ Database: MySQL (μέσω XAMPP)
 Dependency Management: Composer (PHPMailer & PHP Dotenv) 
 
 
-Frontend: HTML5, CSS3, Bootstrap 5 (Responsive Design) 
+Frontend: HTML5, CSS3, Bootstrap 5 (Responsive Design) Javascript
 
 
 JavaScript: jQuery, AJAX / JSON για Live Search και δυναμική ανταλλαγή δεδομένων 
