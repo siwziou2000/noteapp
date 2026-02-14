@@ -53,7 +53,7 @@ Restart τον Apache μετά τις αλλαγές.
 
 composer install //egkatastasi tou vendor phpmailer
 
-composer install  vlucas/phpdotenv
+$ composer require vlucas/phpdotenv
 
 4. Ρύθμιση Μεταβλητών Περιβάλλοντος (.env)
    
