@@ -41,17 +41,20 @@ Encryption: Κρυπτογράφηση κωδικών πρόσβασης και 
 2. Ρύθμιση PHP (XAMPP)
 Ανοίξτε το αρχείο php.ini από το XAMPP (Apache > Config) και ενεργοποιήστε/βεβαιωθείτε για τα εξής:
 
-extension=zip (Αφαιρέστε το ερωτηματικό ; μπροστά).
+ extension=zip (Αφαιρέστε το ερωτηματικό ; μπροστά).
 
 
 Restart τον Apache μετά τις αλλαγές.
 
 3. Εγκατάσταση Βιβλιοθηκών
+4. 
 Ανοίξτε το τερματικό (Command Prompt) μέσα στον φάκελο του project και εκτελέστε τις παρακάτω εντολές:
 
 composer install //egkatastasi tou vendor phpmailer
 composer install  vlucas/phpdotenv
+
 4. Ρύθμιση Μεταβλητών Περιβάλλοντος (.env)
+   
 Δημιουργήστε ένα αρχείο με όνομα .env στον κεντρικό φάκελο του project και εισάγετε τις ρυθμίσεις σας:
 
 Απόσπασμα κώδικα
@@ -67,11 +70,13 @@ MAIL_PORT=587
 Προσοχή: Ο κωδικός Gmail App Password πρέπει να περικλείεται σε εισαγωγικά ("").
 
 5. Βάση Δεδομένων
+   
 Δημιουργήστε μια νέα βάση δεδομένων στη MySQL με όνομα noteapp.
 
 Κάντε εισαγωγή (Import) το παρεχόμενο αρχείο .sql.
 
 6. Σύνδεση με Google (Gmail SMTP)
+   
 Ενεργοποιήστε το 2-Step Verification στον Google λογαριασμό σας.
 
 Δημιουργήστε ένα App Password (Security > App Passwords).
