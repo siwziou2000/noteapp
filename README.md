@@ -48,10 +48,11 @@ Encryption: Κρυπτογράφηση κωδικών πρόσβασης και 
 Restart τον Apache μετά τις αλλαγές.
 
 3. Εγκατάσταση Βιβλιοθηκών
-4. 
+   
 Ανοίξτε το τερματικό (Command Prompt) μέσα στον φάκελο του project και εκτελέστε τις παρακάτω εντολές:
 
 composer install //egkatastasi tou vendor phpmailer
+
 composer install  vlucas/phpdotenv
 
 4. Ρύθμιση Μεταβλητών Περιβάλλοντος (.env)
