@@ -40,7 +40,7 @@ Encryption: Κρυπτογράφηση κωδικών πρόσβασης και 
 Τοποθετήστε τον φάκελο του project στη διαδρομή: C:\xampp\htdocs\noteapp.
 
 2. Ρύθμιση PHP (XAMPP)
-Ανοίξτε το αρχείο php.ini από το XAMPP (Apache > Config) και ενεργοποιήστε/βεβαιωθείτε για τα εξής:
+ Ανοίξτε το αρχείο php.ini από το XAMPP (Apache > Config) και ενεργοποιήστε/βεβαιωθείτε για τα εξής:
 
  extension=zip (Αφαιρέστε το ερωτηματικό ; μπροστά).
 
@@ -60,15 +60,24 @@ composer install  vlucas/phpdotenv
 Δημιουργήστε ένα αρχείο με όνομα .env στον κεντρικό φάκελο του project και εισάγετε τις ρυθμίσεις σας:
 
 Απόσπασμα κώδικα
+
 DB_HOST=localhost
+
 DB_NAME=noteapp
+
 DB_USER=root
+
 DB_PASS=
 
+
 MAIL_HOST=smtp.gmail.com
+
 MAIL_USERNAME=το_email_σας@gmail.com
+
 MAIL_PASSWORD="ο_16ψήφιος_κωδικός_εφαρμογής"
+
 MAIL_PORT=587
+
 Προσοχή: Ο κωδικός Gmail App Password πρέπει να περικλείεται σε εισαγωγικά ("").
 
 5. Βάση Δεδομένων
@@ -96,4 +105,4 @@ MAIL_PORT=587
 💻 Εκτέλεση
 Ανοίξτε τον browser και πληκτρολογήστε: http://localhost/noteapp.
 
-s
+
